@@ -12,6 +12,7 @@ struct ContentView: View {
         NavigationStack {
             List {
                 NavigationLink("Pascal's Triangle", destination: PascalTriangleView())
+                NavigationLink("Three Largest Numbers", destination: ThreeLargestNumbersView())
             }
             .listStyle(.plain)
             .navigationTitle("Algorithms")
