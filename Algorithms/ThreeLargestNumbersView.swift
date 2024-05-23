@@ -13,13 +13,13 @@ struct ThreeLargestNumbersView: View {
 
     var body: some View {
         VStack {
-            TextField("Enter an array of numbers", text: $userInput)
+            TextField("Enter a comma-separated array of numbers", text: $userInput)
                 .keyboardType(.numberPad)
                 .padding()
 
             Button(action: {
                 // Call the external function and update the outputResult
-                let array = userInput.components(separatedBy: ", ")
+                let array = userInput.components(separatedBy: ",")
                 let arrayInt = array.compactMap { Int($0) }
                 outputResult = Algorithms.threeLargestNumbers(array: arrayInt)
             }) {
@@ -30,7 +30,7 @@ struct ThreeLargestNumbersView: View {
                     .cornerRadius(8)
             }
 
-            let result = outputResult.map { "\($0)" }.joined(separator: ", ")
+            let result = outputResult.map { "\($0)" }.joined(separator: ",")
             Text("Result:\n\(result)")
         }
         .padding()
