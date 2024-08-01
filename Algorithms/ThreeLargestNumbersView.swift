@@ -38,5 +38,5 @@ struct ThreeLargestNumbersView: View {
 }
 
 #Preview {
-    PascalTriangleView()
+    ThreeLargestNumbersView()
 }
